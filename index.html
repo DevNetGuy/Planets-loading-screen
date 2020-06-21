@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="css/style.css" rel="stylesheet">
+    <title>Loading Screen Demo</title>
+</head>
+
+<body>
+
+    <!-- Planets Loading Screen -->
+    <div id="loader" class="portfolio-loader">
+        <div class="sun"></div>
+        <div class="orbit orbit1">
+            <div class="planetX planet1"></div>
+        </div>
+        <div class="orbit orbit2">
+            <div class="planetX planet2"></div>
+        </div>
+        <div class="orbit orbit3">
+            <div class="planetX planet3"></div>
+        </div>
+    </div>
+    <!-- End of Planets Loading Screen -->
+
+    <!-- Put your Site contents Here -->
+    <h1>Hello, Your website is Fully loaded Now Enjoy. <br> this loading screen was Coded by: <a
+            href="https://github.com/DevNetGuy/">Abdulrahman Alwerfali</a></h1>
+    <!-- END of Put your website contents Here -->
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                    "#loader").style.visibility = "visible";
+                document.querySelector(
+                    "body").style.visibility = "hidden";
+            } else {
+                document.querySelector(
+                    "body").style.visibility = "visible";
+                document.querySelector(
+                    "#loader").style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
